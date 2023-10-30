@@ -19,7 +19,7 @@ export class Category extends BaseEntity {
   category_id: number;
 
   @OneToMany(() => SubCategory, (sub_category) => sub_category.category)
-  sub_categories: Record<string, any>[];;
+  sub_categories: SubCategory[];
 
   @Column({ type: 'jsonb' })
   name: Record<string, string>;
