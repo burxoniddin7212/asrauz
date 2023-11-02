@@ -6,6 +6,7 @@ export * from './order.entity';
 export * from './karzinka.entity';
 export * from './favorite.entity';
 export * from './category.entity';
+export * from './last.seen.entity';
 export * from './percentage.entity';
 export * from './connection.entity';
 export * from './sub.category.entity';

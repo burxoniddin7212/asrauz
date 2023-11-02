@@ -1,7 +1,7 @@
 import 'moment-timezone';
 import * as moment from 'moment';
-import { Order, Favorite, Karzinka } from '.';
 import { Gander, RowsStatus } from 'src/config';
+import { Order, Favorite, Karzinka, LastSeen } from '.';
 import {
   Index,
   Entity,
@@ -20,6 +20,9 @@ export class User extends BaseEntity {
 
   @OneToMany(() => Favorite, (favorite) => favorite.user)
   favorites: Favorite[];
+
+  @OneToMany(() => LastSeen, (lastSeen) => lastSeen.user)
+  last_seens: LastSeen[];
 
   @OneToMany(() => Karzinka, (karzinka) => karzinka.user)
   karzinka: Karzinka[];
