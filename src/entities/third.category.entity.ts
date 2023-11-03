@@ -21,8 +21,8 @@ export class ThirdCategory extends BaseEntity {
 
   @Column()
   @ManyToOne(() => SubCategory, (subCategory) => subCategory.third_categories)
-  @JoinColumn({ name: 'sub_category_id' })
-  sub_category: number;
+  @JoinColumn({ name: 'sub_category' })
+  sub_category: SubCategory;
 
   @Column({ type: 'jsonb' })
   name: Record<string, string>;

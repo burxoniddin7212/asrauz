@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 export * from './sms.entity';
 export * from './news.entity';
 export * from './user.entity';

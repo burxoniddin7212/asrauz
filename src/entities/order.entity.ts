@@ -21,13 +21,13 @@ export class Order extends BaseEntity {
 
   @Column()
   @ManyToOne(() => User, (user) => user.orders)
-  @JoinColumn({ name: 'user_id' })
-  user:  number;
+  @JoinColumn({ name: 'user' })
+  user: User;
 
   @Column()
   @ManyToOne(() => Admin, (admin) => admin.orders)
-  @JoinColumn({ name: 'admin_id' })
-  admin:  number;
+  @JoinColumn({ name: 'admin' })
+  admin: Admin;
 
   @Column({ type: 'int' })
   cargo_id: number;

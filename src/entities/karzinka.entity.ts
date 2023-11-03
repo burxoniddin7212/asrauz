@@ -21,8 +21,8 @@ export class Karzinka extends BaseEntity {
 
   @Column()
   @ManyToOne(() => User, (user) => user.karzinka)
-  @JoinColumn({ name: 'user_id' })
-  user: number;
+  @JoinColumn({ name: 'user' })
+  user: User;
 
   @Column({ type: 'bigint' })
   product_id: string;

@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import 'moment-timezone';
 import * as moment from 'moment';
 import { RowsStatus } from 'src/config';
@@ -22,8 +23,8 @@ export class SubCategory extends BaseEntity {
 
   @Column()
   @ManyToOne(() => Category, (category) => category.sub_categories)
-  @JoinColumn({ name: 'category_id' })
-  category: number;
+  @JoinColumn({ name: 'category' })
+  category: Category;
 
   @OneToMany(
     () => ThirdCategory,

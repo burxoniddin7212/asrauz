@@ -1,6 +1,6 @@
 import 'moment-timezone';
 import * as moment from 'moment';
-import { Admin } from '.';
+import { Admin } from './admin.entity';
 import { RowsStatus } from 'src/config';
 import {
   Index,
@@ -21,8 +21,8 @@ export class News extends BaseEntity {
 
   @Column()
   @ManyToOne(() => Admin, (admin) => admin.news)
-  @JoinColumn({ name: 'admin_id' })
-  admin: number;
+  @JoinColumn({ name: 'admin' })
+  admin: Admin;
 
   @Column({ type: 'jsonb' })
   title: Record<string, string>;

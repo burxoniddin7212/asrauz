@@ -20,7 +20,7 @@ import { JwtStrategy, jwtSecretKey } from './common';
       password: '7212',
       port: 5432,
       entities: [__dirname + '/entities/*.entity.{ts,js}'],
-      synchronize: false,
+      synchronize: true,
     }),
   ],
   providers: [

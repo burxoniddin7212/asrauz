@@ -5,8 +5,6 @@ import {
   Index,
   Entity,
   Column,
-  ManyToOne,
-  JoinColumn,
   BaseEntity,
   CreateDateColumn,
   UpdateDateColumn,

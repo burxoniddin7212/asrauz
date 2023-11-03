@@ -21,8 +21,8 @@ export class LastSeen extends BaseEntity {
 
   @Column()
   @ManyToOne(() => User, (user) => user.last_seens)
-  @JoinColumn({ name: 'user_id' })
-  user: number;
+  @JoinColumn({ name: 'user' })
+  user: User;
 
   @Column({ type: 'bigint' })
   product_id: string;

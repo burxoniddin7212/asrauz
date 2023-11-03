@@ -21,8 +21,8 @@ export class Favorite extends BaseEntity {
 
   @Column()
   @ManyToOne(() => User, (user) => user.favorites)
-  @JoinColumn({ name: 'user_id' })
-  user: number;
+  @JoinColumn({ name: 'user' })
+  user: User;
 
   @Column({ type: 'bigint' })
   product_id: string;
