@@ -33,7 +33,7 @@ export class User extends BaseEntity {
   @Column({ type: 'int' })
   cargo_id: number;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', nullable: true })
   address: number;
 
   @Column({ type: 'varchar', default: 'user' })
@@ -51,19 +51,19 @@ export class User extends BaseEntity {
   @Column({ type: 'varchar' })
   number: string;
 
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar', nullable: true })
   image: string;
 
-  @Column({ type: 'enum', enum: Gander })
+  @Column({ type: 'enum', enum: Gander, nullable: true })
   gander: Gander;
 
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar', nullable: true })
   email: string;
 
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar', nullable: true })
   birthday: string;
 
-  @Column({ type: 'date' })
+  @Column({ type: 'date', nullable: true })
   last_login: Date;
 
   @Column({ type: 'enum', enum: RowsStatus, default: RowsStatus.active })

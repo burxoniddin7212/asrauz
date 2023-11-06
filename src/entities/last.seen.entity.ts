@@ -30,6 +30,9 @@ export class LastSeen extends BaseEntity {
   title: string;
 
   @Column({ type: 'varchar' })
+  title_cn: string;
+
+  @Column({ type: 'varchar' })
   price: string;
 
   @Column({ type: 'varchar' })
