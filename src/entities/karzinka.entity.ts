@@ -19,7 +19,6 @@ export class Karzinka extends BaseEntity {
   @PrimaryGeneratedColumn()
   karzinka_id: number;
 
-  @Column()
   @ManyToOne(() => User, (user) => user.karzinka)
   @JoinColumn({ name: 'user' })
   user: User;

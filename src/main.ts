@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { join } from 'path';
 import { PORT } from './config';
 import * as express from 'express';

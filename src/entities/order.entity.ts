@@ -19,12 +19,10 @@ export class Order extends BaseEntity {
   @PrimaryGeneratedColumn()
   order_id: number;
 
-  @Column()
   @ManyToOne(() => User, (user) => user.orders)
   @JoinColumn({ name: 'user' })
   user: User;
 
-  @Column()
   @ManyToOne(() => Admin, (admin) => admin.orders)
   @JoinColumn({ name: 'admin' })
   admin: Admin;

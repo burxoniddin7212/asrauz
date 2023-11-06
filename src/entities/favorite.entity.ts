@@ -19,7 +19,6 @@ export class Favorite extends BaseEntity {
   @PrimaryGeneratedColumn()
   favorite_id: number;
 
-  @Column()
   @ManyToOne(() => User, (user) => user.favorites)
   @JoinColumn({ name: 'user' })
   user: User;

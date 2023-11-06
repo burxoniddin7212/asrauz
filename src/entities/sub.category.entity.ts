@@ -21,7 +21,6 @@ export class SubCategory extends BaseEntity {
   @PrimaryGeneratedColumn()
   sub_category_id: number;
 
-  @Column()
   @ManyToOne(() => Category, (category) => category.sub_categories)
   @JoinColumn({ name: 'category' })
   category: Category;

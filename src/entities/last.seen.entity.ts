@@ -19,7 +19,6 @@ export class LastSeen extends BaseEntity {
   @PrimaryGeneratedColumn()
   last_seen_id: number;
 
-  @Column()
   @ManyToOne(() => User, (user) => user.last_seens)
   @JoinColumn({ name: 'user' })
   user: User;

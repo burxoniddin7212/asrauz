@@ -1,6 +1,6 @@
 import 'moment-timezone';
 import * as moment from 'moment';
-import { Admin } from './admin.entity';
+import { Admin } from '.';
 import { RowsStatus } from 'src/config';
 import {
   Index,
@@ -19,7 +19,6 @@ export class News extends BaseEntity {
   @PrimaryGeneratedColumn()
   news_id: number;
 
-  @Column()
   @ManyToOne(() => Admin, (admin) => admin.news)
   @JoinColumn({ name: 'admin' })
   admin: Admin;
